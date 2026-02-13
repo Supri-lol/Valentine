@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff9aec, #fad0c4);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.name {
+    color: #ff4d6d;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #ff4d6d;
+    }
+    to {
+        text-shadow: 0 0 15px #ffb3c6;
+    }
+}
+
+.card {
+    background: rgb(255, 255, 255);
+    padding: 35px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(38, 73, 200, 0.57);
+    z-index: 2;
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #e63946;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.question {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.yes {
+    background: #e63946;
+    color: white;
+}
+
+.yes:hover {
+    background: #d62828;
+}
+
+.no {
+    background: #ccc;
+}
+
+/* Floating hearts */
+.heart, .confetti {
+    position: absolute;
+    bottom: -20px;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.9;
+}
+
+.no:hover {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+.final{
+    border: #ff9a9f;
+}
